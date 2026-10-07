@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Home 2050</title>
+
+    <script>
+        if (localStorage.getItem("smartHomeAuth") !== "true") {
+            window.location.replace("Login.html");
+        }
+    </script>
+
+    <link rel="stylesheet" href="sh.css">
+</head>
+
+<body>
+
+   
+
+    <!-- =========================================
+         BACKGROUND EFFECTS
+    ========================================== -->
+
+    <div class="stars"></div>
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+
+    <!-- =========================================
+         MAIN APPLICATION
+    ========================================== -->
+
+    <div class="app" id="app">
+
+        <!-- NAVIGATION -->
+
+        <header class="navbar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    ⌂
+                </div>
+
+                <div>
+                    <h2>SMART<span>HOME</span></h2>
+                    <small>2050 INTELLIGENCE SYSTEM</small>
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="#dashboard">Dashboard</a>
+                <a href="#rooms">Rooms</a>
+                <a href="#devices">Devices</a>
+                <a href="#energy">Energy</a>
+                <a href="#routines">Routines</a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <button class="icon-btn" id="notificationBtn">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+                <button class="profile-btn">
+                    👤 Admin
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================
+             HERO / DASHBOARD
+        ====================================== -->
+
+        <main>
+
+            <section class="hero" id="dashboard">
+
+                <div class="hero-content">
+
+                    <div class="status-pill">
+
+                        <span class="pulse"></span>
+
+                        SYSTEM ONLINE
+
+                    </div>
+
+                    <h1>
+                        Welcome to your
+                        <span>Smart Future.</span>
+                    </h1>
+
+                    <p>
+                        Control your home, automate your routines
+                        and monitor your energy through one
+                        intelligent interface.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <button
+                            class="primary-btn"
+                            id="createRoutineBtn"
+                        >
+                            ⚡ Create Routine
+                        </button>
+
+                        <button
+                            class="secondary-btn"
+                            id="addDeviceBtn"
+                        >
+                            ＋ Add Device
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 3D HOUSE -->
+
+                <div class="house-container">
+
+                    <div class="house-3d">
+
+                        <div class="roof"></div>
+
+                        <div class="house-body">
+
+                            <div class="window window-1"></div>
+
+                            <div class="window window-2"></div>
+
+                            <div class="door"></div>
+
+                        </div>
+
+                        <div class="garden"></div>
+
+                    </div>
+
+                    <div class="house-glow"></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 LIVE STATISTICS
+            ====================================== -->
+
+            <section class="stats-grid">
+
+                <div class="stat-card tilt">
+
+                    <div class="stat-icon">🌡️</div>
+
+                    <div>
+
+                        <span>Temperature</span>
+
+                        <strong id="temperature">
+                            23°C
+                        </strong>
+
+                    </div>
+
+                    <small>Comfortable</small>
+
+                </div>
+
+
+                <div class="stat-card tilt">
+
+                    <div class="stat-icon">💧</div>
+
+                    <div>
+
+                        <span>Humidity</span>
+
+                        <strong id="humidity">
+                            48%
+                        </strong>
+
+                    </div>
+
+                    <small>Optimal</small>
+
+                </div>
+
+
+                <div class="stat-card tilt">
+
+                    <div class="stat-icon">🌬️</div>
+
+                    <div>
+
+                        <span>Air Quality</span>
+
+                        <strong>
+                            96
+                        </strong>
+
+                    </div>
+
+                    <small>Excellent</small>
+
+                </div>
+
+
+                <div class="stat-card tilt">
+
+                    <div class="stat-icon">⚡</div>
+
+                    <div>
+
+                        <span>Energy Usage</span>
+
+                        <strong id="energyUsage">
+                            4.8 kW
+                        </strong>
+
+                    </div>
+
+                    <small>↓ 12% today</small>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 ROOMS
+            ====================================== -->
+
+            <section class="section" id="rooms">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            ENVIRONMENT
+                        </span>
+
+                        <h2>Smart Rooms</h2>
+
+                    </div>
+
+                    <button class="view-btn">
+                        View Floor Plan →
+                    </button>
+
+                </div>
+
+
+                <div class="room-grid">
+
+
+                    <div class="room-card active-room tilt">
+
+                        <div class="room-image living-room">
+
+                            <div class="room-light"></div>
+
+                        </div>
+
+                        <div class="room-info">
+
+                            <div>
+
+                                <h3>Living Room</h3>
+
+                                <p>4 devices online</p>
+
+                            </div>
+
+                            <button class="room-btn">
+                                →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="room-card tilt">
+
+                        <div class="room-image bedroom">
+
+                            <div class="bed"></div>
+
+                        </div>
+
+                        <div class="room-info">
+
+                            <div>
+
+                                <h3>Master Bedroom</h3>
+
+                                <p>3 devices online</p>
+
+                            </div>
+
+                            <button class="room-btn">
+                                →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="room-card tilt">
+
+                        <div class="room-image kitchen">
+
+                            <div class="kitchen-counter"></div>
+
+                        </div>
+
+                        <div class="room-info">
+
+                            <div>
+
+                                <h3>Kitchen</h3>
+
+                                <p>5 devices online</p>
+
+                            </div>
+
+                            <button class="room-btn">
+                                →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="room-card tilt">
+
+                        <div class="room-image office">
+
+                            <div class="desk"></div>
+
+                        </div>
+
+                        <div class="room-info">
+
+                            <div>
+
+                                <h3>Smart Office</h3>
+
+                                <p>6 devices online</p>
+
+                            </div>
+
+                            <button class="room-btn">
+                                →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 DEVICES
+            ====================================== -->
+
+            <section class="section" id="devices">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            DEVICE NETWORK
+                        </span>
+
+                        <h2>Connected Devices</h2>
+
+                    </div>
+
+                    <button
+                        class="primary-small"
+                        id="openAddDevice"
+                    >
+                        + Add Device
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="device-grid"
+                    id="deviceGrid"
+                >
+
+                    <!-- DEVICE -->
+
+                    <div class="device-card tilt">
+
+                        <div class="device-top">
+
+                            <div class="device-icon">
+                                💡
+                            </div>
+
+                            <button class="device-menu">
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>Smart Lights</h3>
+
+                        <p>Living Room</p>
+
+                        <div class="device-bottom">
+
+                            <span>80% Brightness</span>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    checked
+                                    class="device-toggle"
+                                >
+
+                                <span></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="device-card tilt">
+
+                        <div class="device-top">
+
+                            <div class="device-icon">
+                                ❄️
+                            </div>
+
+                            <button class="device-menu">
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>Smart AC</h3>
+
+                        <p>Living Room</p>
+
+                        <div class="device-bottom">
+
+                            <span>23°C</span>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    checked
+                                    class="device-toggle"
+                                >
+
+                                <span></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="device-card tilt">
+
+                        <div class="device-top">
+
+                            <div class="device-icon">
+                                📺
+                            </div>
+
+                            <button class="device-menu">
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>Smart TV</h3>
+
+                        <p>Living Room</p>
+
+                        <div class="device-bottom">
+
+                            <span>Netflix</span>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    class="device-toggle"
+                                >
+
+                                <span></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="device-card tilt">
+
+                        <div class="device-top">
+
+                            <div class="device-icon">
+                                🔊
+                            </div>
+
+                            <button class="device-menu">
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>AI Speaker</h3>
+
+                        <p>Bedroom</p>
+
+                        <div class="device-bottom">
+
+                            <span>Listening</span>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    checked
+                                    class="device-toggle"
+                                >
+
+                                <span></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 ENERGY
+            ====================================== -->
+
+            <section class="section" id="energy">
+
+                <div class="energy-layout">
+
+                    <div class="energy-panel">
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    POWER INTELLIGENCE
+                                </span>
+
+                                <h2>Energy Monitoring</h2>
+
+                            </div>
+
+                            <span class="live-label">
+                                ● LIVE
+                            </span>
+
+                        </div>
+
+
+                        <div class="energy-main">
+
+                            <div class="energy-circle">
+
+                                <div>
+
+                                    <strong id="energyPercent">
+                                        72%
+                                    </strong>
+
+                                    <span>
+                                        Efficiency
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="energy-details">
+
+                                <div>
+
+                                    <span>
+                                        Current Usage
+                                    </span>
+
+                                    <strong>
+                                        4.8 kW
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Solar Power
+                                    </span>
+
+                                    <strong>
+                                        3.2 kW
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Battery
+                                    </span>
+
+                                    <strong>
+                                        86%
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CHART -->
+
+                    <div class="chart-panel">
+
+                        <div class="chart-header">
+
+                            <h3>Energy Consumption</h3>
+
+                            <select id="chartPeriod">
+
+                                <option>Today</option>
+
+                                <option>Week</option>
+
+                                <option>Month</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="chart">
+
+                            <div class="chart-line"></div>
+
+                            <div class="chart-bars">
+
+                                <i style="height:35%"></i>
+                                <i style="height:55%"></i>
+                                <i style="height:42%"></i>
+                                <i style="height:70%"></i>
+                                <i style="height:48%"></i>
+                                <i style="height:80%"></i>
+                                <i style="height:60%"></i>
+                                <i style="height:40%"></i>
+                                <i style="height:65%"></i>
+                                <i style="height:50%"></i>
+                                <i style="height:75%"></i>
+                                <i style="height:45%"></i>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 ROUTINES
+            ====================================== -->
+
+            <section class="section" id="routines">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            AUTOMATION ENGINE
+                        </span>
+
+                        <h2>Smart Routines</h2>
+
+                    </div>
+
+                    <button
+                        class="primary-small"
+                        id="routineBtn"
+                    >
+                        + Create Routine
+                    </button>
+
+                </div>
+
+
+                <div class="routine-grid">
+
+                    <div class="routine-card">
+
+                        <div class="routine-icon">
+                            🌅
+                        </div>
+
+                        <div>
+
+                            <h3>Good Morning</h3>
+
+                            <p>
+                                Lights ON • Curtains OPEN •
+                                Coffee Machine ON
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="routine-card">
+
+                        <div class="routine-icon">
+                            🌙
+                        </div>
+
+                        <div>
+
+                            <h3>Good Night</h3>
+
+                            <p>
+                                Lights OFF • Doors LOCKED •
+                                Security ON
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="routine-card">
+
+                        <div class="routine-icon">
+                            🎬
+                        </div>
+
+                        <div>
+
+                            <h3>Movie Mode</h3>
+
+                            <p>
+                                Lights 20% • TV ON •
+                                Sound System ON
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 FUTURE CONTROL
+            ====================================== -->
+
+            <section class="future-section">
+
+                <div class="future-content">
+
+                    <span class="section-label">
+                        NEXT GENERATION LIVING
+                    </span>
+
+                    <h2>
+                        Your home.
+                        <span>Your intelligence.</span>
+                    </h2>
+
+                    <p>
+                        Artificial intelligence continuously learns
+                        your habits and optimizes your home
+                        environment automatically.
+                    </p>
+
+                    <button
+                        class="primary-btn"
+                        id="aiBtn"
+                    >
+                        ✦ Activate AI Assistant
+                    </button>
+
+                </div>
+
+                <div class="hologram">
+
+                    <div class="holo-ring ring-1"></div>
+                    <div class="holo-ring ring-2"></div>
+                    <div class="holo-ring ring-3"></div>
+
+                    <div class="holo-core">
+                        AI
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- =====================================
+             FOOTER
+        ====================================== -->
+
+        <footer>
+
+            <div>
+                © 2050 Smart Home Intelligence
+            </div>
+
+            <div>
+                SYSTEM STATUS:
+                <span class="online">
+                    ● ONLINE
+                </span>
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <!-- =========================================
+         ADD DEVICE MODAL
+    ========================================== -->
+
+    <div class="modal" id="deviceModal">
+
+        <div class="modal-card">
+
+            <button
+                class="close-modal"
+                id="closeDeviceModal"
+            >
+                ×
+            </button>
+
+            <h2>Add Smart Device</h2>
+
+            <p>
+                Connect a new device to your smart home.
+            </p>
+
+            <input
+                type="text"
+                id="deviceName"
+                placeholder="Device name"
+            >
+
+            <select id="deviceType">
+
+                <option value="💡">
+                    Smart Light
+                </option>
+
+                <option value="❄️">
+                    Smart AC
+                </option>
+
+                <option value="📺">
+                    Smart TV
+                </option>
+
+                <option value="🔊">
+                    Smart Speaker
+                </option>
+
+                <option value="🔒">
+                    Smart Lock
+                </option>
+
+                <option value="📷">
+                    Security Camera
+                </option>
+
+            </select>
+
+            <select id="deviceRoom">
+
+                <option>Living Room</option>
+                <option>Bedroom</option>
+                <option>Kitchen</option>
+                <option>Office</option>
+
+            </select>
+
+            <button
+                class="primary-btn full"
+                id="saveDevice"
+            >
+                CONNECT DEVICE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         ROUTINE MODAL
+    ========================================== -->
+
+    <div class="modal" id="routineModal">
+
+        <div class="modal-card">
+
+            <button
+                class="close-modal"
+                id="closeRoutineModal"
+            >
+                ×
+            </button>
+
+            <h2>Create Smart Routine</h2>
+
+            <p>
+                Build an automated action for your home.
+            </p>
+
+            <input
+                type="text"
+                id="routineName"
+                placeholder="Routine name"
+            >
+
+            <select id="routineAction">
+
+                <option>
+                    Turn ON lights
+                </option>
+
+                <option>
+                    Turn OFF lights
+                </option>
+
+                <option>
+                    Adjust temperature
+                </option>
+
+                <option>
+                    Activate security
+                </option>
+
+                <option>
+                    Start entertainment mode
+                </option>
+
+            </select>
+
+            <button
+                class="primary-btn full"
+                id="saveRoutine"
+            >
+                CREATE ROUTINE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         NOTIFICATION PANEL
+    ========================================== -->
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+    >
+
+        <div class="notification-header">
+
+            <h3>Notifications</h3>
+
+            <button id="closeNotifications">
+                ×
+            </button>
+
+        </div>
+
+        <div class="notification">
+
+            <span>⚡</span>
+
+            <div>
+                <strong>Energy optimized</strong>
+                <p>Solar system reduced grid usage.</p>
+            </div>
+
+        </div>
+
+        <div class="notification">
+
+            <span>🔒</span>
+
+            <div>
+                <strong>Security active</strong>
+                <p>All exterior doors are secured.</p>
+            </div>
+
+        </div>
+
+        <div class="notification">
+
+            <span>🌱</span>
+
+            <div>
+                <strong>Eco mode</strong>
+                <p>Your home is operating efficiently.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="toast"
+        id="toast"
+    >
+        System updated successfully
+    </div>
+    <script src="sh.js"></script>
+
+
+</body>
+</html>
+

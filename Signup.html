@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Home 2050 - Signup</title>
+
+    <link rel="stylesheet" href="Signup.css">
+</head>
+
+<body>
+
+    <div class="background">
+
+        <div class="light light1"></div>
+        <div class="light light2"></div>
+
+        <div class="signup-card">
+
+            <div class="logo">
+                🏠
+            </div>
+
+            <h1>Smart Home 2050</h1>
+
+            <p class="subtitle">
+                Create your smart home account
+            </p>
+
+
+            <form id="signupForm">
+
+                <!-- Full Name -->
+
+                <div class="input-group">
+
+                    <label for="full">
+                        👤 Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="full"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="input-group">
+
+                    <label for="email">
+                        📧 Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Mobile -->
+
+                <div class="input-group">
+
+                    <label for="mobile">
+                        📱 Mobile Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="mobile"
+                        placeholder="Enter mobile number"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="input-group">
+
+                    <label for="password">
+                        🔐 Password
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Create password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            onclick="togglePassword('password', this)"
+                        >
+                            👁️
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Confirm Password -->
+
+                <div class="input-group">
+
+                    <label for="confirmPassword">
+                        🔑 Confirm Password
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            onclick="togglePassword('confirmPassword', this)"
+                        >
+                            👁️
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <p id="message"></p>
+
+
+                <button
+                    type="submit"
+                    class="signup-btn"
+                >
+                    🚀 Create Smart Home Account
+                </button>
+
+
+                <p class="login-text">
+
+                    Already have an account?
+
+                    <a href="Login.html">
+                        Login
+                    </a>
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="Signup.js"></script>
+
+</body>
+
+</html>
